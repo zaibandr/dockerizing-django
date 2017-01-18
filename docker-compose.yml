@@ -13,7 +13,7 @@ web:
   environment:
     DEBUG: 'true'
   command: manage.py collectstatic
-  command: /usr/local/bin/gunicorn docker_django.wsgi:application -w 2 -b :8000
+  command: /usr/local/bin/gunicorn docker_django.wsgi:application -w 2 -b :8000 --reload
 
 nginx:
   restart: always
