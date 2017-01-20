@@ -1,7 +1,13 @@
 server {
+    listen       80;
+    server_name  www.tfind.ru;
+    return       301 http://tfind.ru$request_uri;
+}
+
+server {
 
     listen 80;
-    server_name example.org;
+    server_name tfind.ru;
     charset utf-8;
 
     location /static {
